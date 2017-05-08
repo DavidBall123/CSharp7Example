@@ -9,18 +9,17 @@ namespace CSharp7Examples
 {
     public class Person: IPerson, IDisposable
     {
-        private readonly string _firstName;
-        private readonly string _lastName;
-        private readonly int _age;
+        private readonly (string FirstName, string LastName, int Age) _personDetails;
+
         public Person(string firstName, string lastName, int age)
         {
             Guard.That(firstName).IsNotNullOrEmpty();
             Guard.That(lastName).IsNotNullOrEmpty();
             Guard.That(age).IsInRange(1,150);
 
-            _firstName = firstName;
-            _lastName = lastName;
-            _age = age;
+            _personDetails.Item1 = firstName;
+            _personDetails.Item2 = lastName;
+            _personDetails.Item3 = age;
         }
 
         public void Dispose()
@@ -29,7 +28,7 @@ namespace CSharp7Examples
 
         public (string FirstName, string LastName, int Age) GetPersonDetails()
         {
-            return (_firstName, _lastName, _age);
+            return (_personDetails);
         }
     }
 }
