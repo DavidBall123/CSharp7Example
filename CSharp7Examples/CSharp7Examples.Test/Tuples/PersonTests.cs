@@ -1,9 +1,9 @@
 ﻿using System;
+using CSharp7Examples.Tuples;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NSubstitute;
 
-namespace CSharp7Examples.Test
+namespace CSharp7Examples.Test.Tuples
 {
     [TestClass]
     public class PersonTests

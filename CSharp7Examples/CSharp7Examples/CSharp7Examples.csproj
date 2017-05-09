@@ -46,12 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IPerson.cs" />
-    <Compile Include="Person.cs" />
+    <Compile Include="PatternMatching\Baseball.cs" />
+    <Compile Include="PatternMatching\GridIron.cs" />
+    <Compile Include="PatternMatching\Rugby.cs" />
+    <Compile Include="PatternMatching\Sport.cs" />
+    <Compile Include="Tuples\IPerson.cs" />
+    <Compile Include="Tuples\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
